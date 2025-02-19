@@ -23,8 +23,7 @@ export async function subscribeToNewsletter(formData: FormData) {
   }
 
   try {
-    // Here you would typically add the email to your newsletter database
-    // For this example, we'll just send a notification email
+    
     const data = await resend.emails.send({
       from: "onboarding@resend.dev", // Using Resend's default verified domain
       to: "defensiqtech@gmail.com",
