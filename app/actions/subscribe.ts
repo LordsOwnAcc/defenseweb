@@ -2,7 +2,7 @@
 
 import { Resend } from "resend"
 
-const resendApiKey = process.env.RESEND_API_KEY
+const resendApiKey = "re_ac9seXdw_DdYYVkBJDiEF8aPTGb1nnFna"
 
 if (!resendApiKey) {
   console.error("RESEND_API_KEY is not set in the environment variables")
