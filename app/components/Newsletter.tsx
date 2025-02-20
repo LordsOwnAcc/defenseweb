@@ -45,14 +45,15 @@ const Newsletter = () => {
           Subscribe to our newsletter for the latest updates, exclusive offers, and safety tips.
         </p>
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-          <Input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="flex-grow"
-          />
+        <Input
+  type="email"
+  placeholder="Enter your email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  required
+  className="flex-grow bg-white text-black placeholder-gray-500 focus:bg-white focus:text-black focus:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary"
+/>
+
           <Button type="submit" variant="secondary" disabled={isSubmitting}>
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
