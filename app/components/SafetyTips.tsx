@@ -6,14 +6,38 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ChevronRight } from "lucide-react"
 
 const safetyTips = [
-  "Always be aware of your surroundings",
-  "Trust your instincts if you feel uncomfortable",
-  "Keep your DefensIQTech ring charged and ready",
-  "Share your location with trusted contacts",
-  "Learn basic self-defense techniques",
-  "Avoid walking alone in poorly lit areas",
-  "Keep emergency numbers easily accessible",
-  "Regularly update your emergency contacts in the app",
+  {
+    tip: "Always be aware of your surroundings",
+    details: "Stay alert to people and activities around you. Avoid distractions like looking at your phone while walking alone."
+  },
+  {
+    tip: "Trust your instincts if you feel uncomfortable",
+    details: "If something doesn’t feel right, remove yourself from the situation immediately and seek help."
+  },
+  {
+    tip: "Keep your DefensIQTech ring charged and ready",
+    details: "Regularly check your device’s battery level and ensure it is functioning properly for emergencies."
+  },
+  {
+    tip: "Share your location with trusted contacts",
+    details: "Enable location sharing with close friends or family when traveling alone, especially at night."
+  },
+  {
+    tip: "Learn basic self-defense techniques",
+    details: "Enroll in a self-defense class to build confidence and improve your ability to protect yourself if needed."
+  },
+  {
+    tip: "Avoid walking alone in poorly lit areas",
+    details: "Stick to well-lit and populated areas whenever possible, and avoid isolated shortcuts."
+  },
+  {
+    tip: "Keep emergency numbers easily accessible",
+    details: "Save important emergency contacts, such as police and family members, on speed dial for quick access."
+  },
+  {
+    tip: "Regularly update your emergency contacts in the app",
+    details: "Ensure that your emergency contact list is current so the right people are notified in case of an emergency."
+  }
 ]
 
 const SafetyTips = () => {
@@ -24,7 +48,7 @@ const SafetyTips = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12 text-primary">Safety Tips</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-          {safetyTips.map((tip, index) => (
+          {safetyTips.map((item, index) => (
             <motion.div
               key={index}
               className="bg-background p-4 rounded-lg shadow-md cursor-pointer flex flex-col w-full"
@@ -32,7 +56,7 @@ const SafetyTips = () => {
               onClick={() => setExpandedTip(expandedTip === index ? null : index)}
             >
               <div className="flex justify-between items-center w-full">
-                <h3 className="text-lg font-semibold text-foreground">{tip}</h3>
+                <h3 className="text-lg font-semibold text-foreground">{item.tip}</h3>
                 <ChevronRight
                   className={`transform transition-transform text-primary ${expandedTip === index ? "rotate-90" : ""}`}
                 />
@@ -46,8 +70,7 @@ const SafetyTips = () => {
                     transition={{ duration: 0.3 }}
                     className="mt-2 text-muted-foreground overflow-hidden"
                   >
-                    This is an expanded explanation of the safety tip. It provides more detailed information and
-                    guidance on how to implement this tip in your daily life.
+                    {item.details}
                   </motion.p>
                 )}
               </AnimatePresence>
@@ -60,4 +83,3 @@ const SafetyTips = () => {
 }
 
 export default SafetyTips
-

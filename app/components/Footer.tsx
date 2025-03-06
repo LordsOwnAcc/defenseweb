@@ -51,18 +51,18 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-primary">Contact</h4>
             <p className="text-sm text-muted-foreground">Email: info@defensiqtech.com</p>
-            <p className="text-sm text-muted-foreground">Phone: +1 (555) 123-4567</p>
+            <p className="text-sm text-muted-foreground">Phone: +1 91 7355834231</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4 text-primary">Follow Us</h4>
             <div className="flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              {/* <Link href="#" className="text-muted-foreground hover:text-primary">
                 <X className="h-6 w-6" />
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              </Link> */}
+              <Link href="https://www.linkedin.com/company/defensiq-tech/" className="text-muted-foreground hover:text-primary">
                 <Instagram className="h-6 w-6" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              <Link href="https://www.instagram.com/defensiq_tech?igsh=NnNybTByam5lbzcw" className="text-muted-foreground hover:text-primary">
                 <Linkedin className="h-6 w-6" />
               </Link>
             </div>
