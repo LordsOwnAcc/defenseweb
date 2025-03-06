@@ -59,10 +59,10 @@ const Footer = () => {
               {/* <Link href="#" className="text-muted-foreground hover:text-primary">
                 <X className="h-6 w-6" />
               </Link> */}
-              <Link href="https://www.linkedin.com/company/defensiq-tech/" className="text-muted-foreground hover:text-primary">
+              <Link href="https://www.instagram.com/defensiq_tech?igsh=NnNybTByam5lbzcw" className="text-muted-foreground hover:text-primary">
                 <Instagram className="h-6 w-6" />
               </Link>
-              <Link href="https://www.instagram.com/defensiq_tech?igsh=NnNybTByam5lbzcw" className="text-muted-foreground hover:text-primary">
+              <Link href="https://www.linkedin.com/company/defensiq-tech/" className="text-muted-foreground hover:text-primary">
                 <Linkedin className="h-6 w-6" />
               </Link>
             </div>
